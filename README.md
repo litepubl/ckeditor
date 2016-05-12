@@ -1,2 +1,2 @@
 # ckeditor plugin for CMS Litepubl
-Big plugin
+To install plugin just upload it to plugins folder and check it in adminpanel
