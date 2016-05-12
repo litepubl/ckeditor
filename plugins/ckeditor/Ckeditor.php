@@ -17,11 +17,15 @@ class Ckeditor extends \litepubl\core\Plugin
   }
   
   public function install() {
-    Ajax::i()->visual = $this->getVisual();
+    $ajax = Ajax::i();
+$ajax->visual = $this->getVisual();
+$ajax->save();
   }
   
   public function uninstall() {
-    Ajax::i()->visual = '';
+    $ajax = Ajax::i();
+$ajax->visual = '';
+$ajax->save();
   }
   
 }
