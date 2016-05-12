@@ -5,22 +5,23 @@
 * Licensed under the MIT (LICENSE.txt) license.
 **/
 
-class ckeditorplugin extends tplugin {
+namespace litepubl\plugins\ckeditor;
+
+use litepubl\admin\posts\Ajax;
+
+class Ckeditor extends \litepubl\core\Plugin
+ {
   
-  public static function i() {
-    return getinstance(__class__);
-  }
-  
-  public function getvisual() {
+  public function getVisual() {
     return '/plugins/ckeditor/init.js';
   }
   
   public function install() {
-    tajaxposteditor ::i()->visual = $this->getvisual();
+    Ajax::i()->visual = $this->getVisual();
   }
   
   public function uninstall() {
-    tajaxposteditor ::i()->visual = '';
+    Ajax::i()->visual = '';
   }
   
-}//class
+}

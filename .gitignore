@@ -1,2 +1,5 @@
 *.log
 temp/*
+plugins/ckeditor/ckeditor/lang/*
+!plugins/ckeditor/ckeditor/lang/ru.js
+!plugins/ckeditor/ckeditor/lang/en.js
